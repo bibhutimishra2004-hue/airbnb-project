@@ -1,0 +1,60 @@
+<% layout("/layout/boilerplate") %>
+    
+    <div class="row">
+        <div class="col-8 offset-2" >
+            <br>
+            <h1>Create a new Listing:</h1>
+            <br>
+    <form method="post" action="http://localhost:8080/listings/new" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input name="lis[title]" type="text" placeholder="enter title" class="form-control" required>
+            <div class="valid-feedback">Title looks good</div>
+            
+        </div>
+        <br>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="lis[description]" id="" placeholder="description" class="form-control" required></textarea>
+            <div class="invalid-feedback">Add some description</div>
+        </div>
+        <!-- <br>
+        <div>
+            <label for="image" class="form-label">Image</label>
+            <input type="text" name="lis[image][url]" placeholder="Enter url of your image" class="form-control" >
+        </div> -->
+        <br>
+        <div>
+            <label for="image" class="form-label">Upload Listing Image</label>
+            <input type="file" name="lis[image]" placeholder="Enter url of your image" class="form-control" required>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="lis[price]" type="text" placeholder="enter price" class="form-control" required>
+                <div class="invalid-feedback">Enter a valid price</div>
+            </div>
+            <br>
+            <div class="col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input name="lis[country]" type="text" placeholder="enter country" class="form-control" required>
+                <div class="invalid-feedback">Enter a valid country</div>
+            </div>
+
+        </div>
+        
+        <br>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input name="lis[location]" type="text" placeholder="enter location" class="form-control" required>
+            <div class="invalid-feedback">Add some valid location</div>
+        </div>        
+        <br><br>
+        <button type="submit" class="btn btn-dark add-btn">Add</button>
+        <br><br>
+    </form>
+</div>
+</div>
+   

@@ -1,0 +1,57 @@
+<% layout("/layout/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+    <h1>Edit Listing:</h1>
+    <br>
+    <form method="post" action="http://localhost:8080/listings/edit/<%= details._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input name="lis[title]" type="text" placeholder="title"  value="<%= details.title %>" class="form-control" required>
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+        <br>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="lis[description]" id="" placeholder="description" class="form-control" required>
+                <%= details.description %>
+            </textarea>
+            <div class="invalid-feedback">Add some description</div>
+        </div>
+        <br>
+        <div class="mb-3">
+            Original Image <br>
+            <img src="<%= originalImageUrl %>" alt="">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload New Image</label>
+            <input type="file" name="lis[image]" placeholder="Enter url of your image" class="form-control" >
+            <div class="invalid-feedback">Add an image</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="lis[price]" type="text" placeholder="enter price" value=" <%= details.price %> " class="form-control" required>
+                <div class="invalid-feedback">Enter a valid price</div>
+            </div>
+            <div class="col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input name="lis[country]" type="text" placeholder="enter country" value="<%= details.country %>" class="form-control" required>
+                <div class="invalid-feedback">Enter a valid country</div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input name="lis[location]" type="text" placeholder="enter location" value="<%= details.location %>" class="form-control" required>
+            <div class="invalid-feedback">Add some valid location</div>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-dark add-btn">Edit</button>
+        <br>
+    </form>
+    <br>
+    </div>
+</div>    
+   
