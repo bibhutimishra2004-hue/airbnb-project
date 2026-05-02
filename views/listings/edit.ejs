@@ -4,7 +4,7 @@
         <br>
     <h1>Edit Listing:</h1>
     <br>
-    <form method="post" action="http://localhost:8080/listings/edit/<%= details._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+    <form method="post" action="/listings/edit/<%= details._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
         <div>
             <label for="title" class="form-label">Title</label>
             <input name="lis[title]" type="text" placeholder="title"  value="<%= details.title %>" class="form-control" required>
